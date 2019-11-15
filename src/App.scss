@@ -1,0 +1,61 @@
+@import "mixins";
+@import "variables";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 114rem;
+  margin: 0 auto; 
+  @include clearfix;
+  .col-1-of-2 {
+    float: left;
+    width: calc((100% - #{$gutter-horizontal}) / 2);
+    &:not(:last-child) {
+      margin-right: $gutter-horizontal;
+    }
+  }
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type=text],
+input[type=number] {
+    padding:.5rem; 
+    border:2px solid #ccc; 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  margin-bottom: 1rem;
+  float: right;
+}
+
+input[type=submit] {
+  background-color: $color-gren;
+  box-shadow: 0 10px 20px rgba($color-black,.2);
+  text-decoration: none;
+  border-radius: .3rem;
+  font-size: 1.6rem;
+  border: none;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+  float: right;
+}
+h2 {
+  text-align: center;
+}
